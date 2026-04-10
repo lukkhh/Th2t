@@ -13,3 +13,11 @@ body {
 h1, h2, h3 {
  font-family: 'Montserrat', sans-serif; /* reemplazar con la fuente de títulos */
 }
+
+nav { display: flex;
+    font-weight:bold;
+    justify-content: center;
+    background-color: #219ebc;
+    padding: 10px 0;
+
+}
