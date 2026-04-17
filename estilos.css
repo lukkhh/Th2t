@@ -16,8 +16,12 @@ h1, h2, h3 {
 #h2p {
     justify-content: center;
     display: flex;
-    padding: 25px 0;
-    
+    padding: 10px 0;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+
 }
 nav { 
     display: flex;
@@ -27,35 +31,27 @@ nav {
     backdrop-filter: blur(10px); 
     border: 1px solid rgba(255, 255, 255, 0.2); 
     padding: 15px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    
 
 }
+
 a:link{
-    color: rgb(0, 0, 0);
+    color: #ffffff;);
     text-decoration: none;
 }
 a:visited{
-    color: #000000;
+    color: #ffffff;
 }
 a:hover{
     color: rgb(17, 71, 115);
 }
 
-footer {
-    display: flex;
-    flex-direction: row;
-    position: relative; bottom: 0;
-    background-color: #4a5759;
-    color: white;
-    justify-content: center;
-    padding: 10px;
-    width: 100%;
-    }
-
 .equipo {
     max-width: 500px;
     margin: 0 auto;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px); 
     border: 1px solid rgba(255, 255, 255, 0.2); 
@@ -63,6 +59,10 @@ footer {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 .equipo1 {
+    color: white;
+    font-size: 1.0rem;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
@@ -72,7 +72,12 @@ footer {
     border: 1px solid rgba(255, 255, 255, 0.2); 
     border-radius: 15px; 
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    
+}
+#h3equipo{
+    color: rgba(255, 255, 255, 0.977);
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .tecnicos {
@@ -88,10 +93,9 @@ footer {
 }
 #h2tec {
     color: #219ebc;
-
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 .centrado{
-
     text-align: center;
 }
 #s-nosotros {
@@ -105,6 +109,51 @@ footer {
     border-radius: 15px; 
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
-.img {
-    
+
+footer {
+    display: flex;
+    flex-direction: row;
+    position: relative; bottom: 0;
+    background-color: #4a5759;
+    color: white;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+    }
+
+.servicios {
+    color: #219ebc;
+    font-size: 15px;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 5px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.servicios .img {
+    display: inline-block;
+    margin: 20px;
+    text-decoration: none;
+    color: white;
+    width: 280px;
+    vertical-align: top;
+}
+
+.servicios .img img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+}
+
+.servicios .img h2 {
+    margin: 15px 0;
+    font-size: 20px;
 }
