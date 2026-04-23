@@ -62,6 +62,50 @@
 <br>
 <div class="centrado">
 <h2>Los mejores tecnicos para tu pc! no dudes y contactanos!</h2>
+
+<section id="contacto">
+  <h2>Contacto</h2>
+  <form action="" method="POST">
+    <label for="nombre">Nombre completo</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Ej: Lucas Nahuel Machado Romero" required="">
+    
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="lolitoloco@gmail.com" required="">
+    
+    <label for="telefono">Teléfono</label>
+    <input type="tel" id="telefono" name="telefono" placeholder="099 958 938" required="">
+    
+    <fieldset>
+      <legend>¿Cómo preferís que te contactemos?</legend>
+      <div class="radio-group">
+        <input type="radio" id="por-email" name="contacto" value="email" required="">
+        <label for="por-email">Email</label>
+      </div>
+      <div class="radio-group">
+        <input type="radio" id="por-tel" name="contacto" value="telefono">
+        <label for="por-tel">Teléfono</label>
+      </div>
+      <div class="radio-group">
+        <input type="radio" id="por-whatsapp" name="contacto" value="whatsapp">
+        <label for="por-whatsapp">WhatsApp</label>
+      </div>
+    </fieldset>
+    
+    
+    <label for="motivo">Motivo del contacto</label>
+    <select id="motivo" name="motivo" required="">
+    <option value="">Seleccioná un motivo</option>
+    <option value="consulta">Consulta general</option>
+    <option value="presupuesto">Presupuesto</option>
+    <option value="soporte">Soporte técnico</option>
+    <option value="otros">Otros</option>
+    </select>
+    <label for="mensaje">Mensaje</label>
+    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu mensaje..." required=""></textarea>
+    
+    <button type="submit">Enviar mensaje</button>
+  </form>
+ </section>
 </div>
 </main>
  <!-- FOOTER — Lucas -->
