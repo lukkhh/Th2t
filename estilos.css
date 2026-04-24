@@ -59,7 +59,7 @@ a:hover{
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 .equipo1 {
-    color: white;
+    color: white;     
     font-size: 1.0rem;
     margin-bottom: 40px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
@@ -74,7 +74,7 @@ a:hover{
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 #h3equipo{
-    color: rgba(255, 255, 255, 0.977);
+    color: rgb(85, 85, 85);
     font-size: 20px;
     margin-bottom: 10px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
@@ -92,7 +92,7 @@ a:hover{
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 #h2tec {
-    color: #219ebc;
+    color: rgb(33, 158, 188);
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 .centrado{
@@ -115,11 +115,11 @@ footer {
     flex-direction: row;
     position: relative; bottom: 0;
     background-color: #4a5759;
-    color: white;
+    color: rgb(33, 158, 188);4
     justify-content: center;
     padding: 10px;
     width: 100%;
-    }
+}
 
 .servicios {
     color: #219ebc;
