@@ -157,3 +157,70 @@ footer {
     margin: 15px 0;
     font-size: 20px;
 }
+
+#contacto {
+    max-width: 600px;
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 32px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.2);
+    border-image: initial;
+    border-radius: 15px;
+}
+
+#contacto h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: rgb(33, 158, 188);
+    text-shadow: rgba(0, 0, 0, 0.3) 2px 2px 4px;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+    unicode-bidi: isolate;
+}
+
+#contacto label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: rgb(85, 85, 85);
+}
+
+#contacto input, #contacto select, #contacto textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    font-size: 16px;
+    box-sizing: border-box;
+    padding: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(204, 204, 204);
+    border-image: initial;
+    border-radius: 4px;
+}
+
+
+#legend {
+    font-weight: bold;
+}
+
+#botonazul[type="submit"] {
+    width: 100%;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 12px;
+    background: rgb(33, 158, 188);
+    border-width: medium;
+    border-style: none;
+    border-color: currentcolor;
+    border-image: initial;
+    border-radius: 4px;
+}

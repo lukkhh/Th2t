@@ -76,7 +76,7 @@
     <input type="tel" id="telefono" name="telefono" placeholder="099 958 938" required="">
     
     <fieldset>
-      <legend>¿Cómo preferís que te contactemos?</legend>
+      <legend id="legend">¿Cómo preferís que te contactemos?</legend>
       <div class="radio-group">
         <input type="radio" id="por-email" name="contacto" value="email" required="">
         <label for="por-email">Email</label>
@@ -95,15 +95,15 @@
     <label for="motivo">Motivo del contacto</label>
     <select id="motivo" name="motivo" required="">
     <option value="">Seleccioná un motivo</option>
-    <option value="consulta">Consulta general</option>
-    <option value="presupuesto">Presupuesto</option>
-    <option value="soporte">Soporte técnico</option>
-    <option value="otros">Otros</option>
+    <option value="consulta">consulta general</option>
+    <option value="presupuesto">presupuesto</option>
+    <option value="soporte">soporte técnico</option>
+    <option value="otros">otros</option>
     </select>
     <label for="mensaje">Mensaje</label>
     <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu mensaje..." required=""></textarea>
     
-    <button type="submit">Enviar mensaje</button>
+    <button type="submit" id="botonazul">Enviar mensaje</button>
   </form>
  </section>
 </div>
