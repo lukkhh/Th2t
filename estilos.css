@@ -1,146 +1,180 @@
-/* === RESET — va siempre primero === */
+/* RESET */
 * {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-/* === TIPOGRAFÍA BASE === */
+
+/* VARIABLESSSSSSS */
+:root {
+    /* Colores */
+    --color-fondo: #F5F5F5;
+    --color-texto: #222222;
+    --color-acento: rgb(33, 158, 188);
+    --color-footer: #4a5759;
+    --color-blanco: #ffffff;
+    --color-hover-nav: rgb(17, 71, 115);
+    --color-label: rgb(85, 85, 85);
+    --color-borde-input: rgb(204, 204, 204);
+
+    /* Glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    --blur: blur(10px);
+
+    /* Fuentes */
+    --fuente-titulo: 'Montserrat', sans-serif;
+    --fuente-texto: 'Open Sans', sans-serif;
+
+    /* Bordes */
+    --radio-grande: 15px;
+    --radio-pequeno: 4px;
+
+    /* Sombras */
+    --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* BODY */
 body {
- font-family: 'Open Sans', sans-serif; /* reemplazar con la fuente elegida */
- background-color: #F5F5F5; /* reemplazar con el color de fondo */
- color: #222222;
+    font-family: var(--fuente-texto);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
 }
-h1, h2, h3 {
- font-family: 'Montserrat', sans-serif; /* reemplazar con la fuente de títulos */
+
+h1,
+h2,
+h3 {
+    font-family: var(--fuente-titulo);
 }
+
+/* TITULOS */
 #h2p {
-    justify-content: center;
     display: flex;
+    justify-content: center;
     padding: 10px 0;
-    color: white;
+    color: var(--color-acento);
     font-size: 30px;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-
-}
-nav { 
-    display: flex;
-    font-weight:bold;
-    justify-content: center;
-    background: rgba(139, 225, 235); 
-    backdrop-filter: blur(10px); 
-    border: 1px solid rgba(255, 255, 255, 0.2); 
-    padding: 15px 0;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    
-
+    text-shadow: var(--text-shadow);
 }
 
-a:link{
-    color: #ffffff;);
-    text-decoration: none;
-}
-a:visited{
-    color: #ffffff;
-}
-a:hover{
-    color: rgb(17, 71, 115);
-}
-
-.equipo {
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px); 
-    border: 1px solid rgba(255, 255, 255, 0.2); 
-    border-radius: 15px; 
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-.equipo1 {
-    color: white;     
-    font-size: 1.0rem;
-    margin-bottom: 40px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px); 
-    border: 1px solid rgba(255, 255, 255, 0.2); 
-    border-radius: 15px; 
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-#h3equipo{
-    color: rgb(85, 85, 85);
+#h3equipo {
     font-size: 20px;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-shadow: var(--text-shadow);
 }
 
-.tecnicos {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px); 
-    border: 1px solid rgba(255, 255, 255, 0.2); 
-    border-radius: 15px; 
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
 #h2tec {
-    color: rgb(33, 158, 188);
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    color: var(--color-acento);
+    text-shadow: var(--text-shadow);
 }
-.centrado{
-    text-align: center;
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    padding: 18px 20px;
+    font-weight: bold;
+
+    background: rgba(139, 225, 235);
+    backdrop-filter: var(--blur);
+    border: 1px solid var(--glass-border);
+
+    text-shadow: var(--text-shadow);
 }
+
+nav a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:visited {
+    color: var(--color-blanco);
+}
+
+nav a:hover {
+    color: var(--color-hover-nav);
+    transform: translateY(-2px);
+}
+
+/* CONTENEDORES GLASS */
+.equipo,
+.tecnicos,
+#s-nosotros,
+.servicios,
+#contacto {
+    background: var(--glass-bg);
+    backdrop-filter: var(--blur);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radio-grande);
+    box-shadow: var(--glass-shadow);
+}
+
+/* SOBRE NOSOTROS */
 #s-nosotros {
     max-width: 1500px;
     margin: 0 auto;
     text-align: center;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px); 
-    border: 1px solid rgba(255, 255, 255, 0.2); 
-    border-radius: 15px; 
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
-footer {
-    display: flex;
-    flex-direction: row;
-    position: relative; bottom: 0;
-    background-color: #4a5759;
-    color: rgb(33, 158, 188);4
-    justify-content: center;
+/* EQUIPO */
+.equipo {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
     padding: 10px;
-    width: 100%;
 }
 
+.equipo1 {
+    color: var(--color-blanco);
+    font-size: 1rem;
+    margin-bottom: 40px;
+    text-shadow: var(--text-shadow);
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+
+    background: var(--glass-bg);
+    backdrop-filter: var(--blur);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radio-grande);
+    box-shadow: var(--glass-shadow);
+}
+
+/* TECNICOS */
+.tecnicos {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.centrado {
+    text-align: center;
+}
+
+/* SERVICIOS */
 .servicios {
-    color: #219ebc;
+    color: var(--color-acento);
     font-size: 15px;
     margin: 0 auto;
     max-width: 1200px;
     padding: 5px 20px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-shadow: var(--text-shadow);
 }
 
 .servicios .img {
     display: inline-block;
     margin: 20px;
     text-decoration: none;
-    color: white;
+    color: var(--color-blanco);
     width: 280px;
     vertical-align: top;
 }
@@ -158,53 +192,41 @@ footer {
     font-size: 20px;
 }
 
+/* CONTACTO */
 #contacto {
     max-width: 600px;
-    backdrop-filter: blur(10px);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 32px;
     margin: 2rem auto;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.1);
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(255, 255, 255, 0.2);
-    border-image: initial;
-    border-radius: 15px;
 }
 
 #contacto h2 {
     text-align: center;
     margin-bottom: 2rem;
-    color: rgb(33, 158, 188);
-    text-shadow: rgba(0, 0, 0, 0.3) 2px 2px 4px;
+    color: var(--color-acento);
+    text-shadow: var(--text-shadow);
 }
 
 form {
     display: block;
-    margin-top: 0em;
-    unicode-bidi: isolate;
 }
 
 #contacto label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: bold;
-    color: rgb(85, 85, 85);
+    color: var(--color-label);
 }
 
-#contacto input, #contacto select, #contacto textarea {
+#contacto input,
+#contacto select,
+#contacto textarea {
     width: 100%;
     margin-bottom: 1rem;
-    font-size: 16px;
-    box-sizing: border-box;
     padding: 10px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(204, 204, 204);
-    border-image: initial;
-    border-radius: 4px;
+    font-size: 16px;
+    border: 1px solid var(--color-borde-input);
+    border-radius: var(--radio-pequeno);
 }
-
 
 #legend {
     font-weight: bold;
@@ -212,15 +234,31 @@ form {
 
 #botonazul[type="submit"] {
     width: 100%;
-    color: white;
+    padding: 12px;
+    background: var(--color-acento);
+    color: var(--color-blanco);
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    padding: 12px;
-    background: rgb(33, 158, 188);
-    border-width: medium;
-    border-style: none;
-    border-color: currentcolor;
-    border-image: initial;
-    border-radius: 4px;
+    border: none;
+    border-radius: var(--radio-pequeno);
+    transition: transform 0.2s ease;
+}
+
+#botonazul[type="submit"]:hover {
+    transform: scale(1.02);
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+
+    padding: 10px;
+    background-color: var(--color-footer);
+    color: var(--color-blanco);
 }
